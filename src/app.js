@@ -15,18 +15,8 @@ const cookieParser = require("cookie-parser");
 app.use(morgan("tiny")); 
 
 app.use(cors({
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'https://sadidukan.vercel.app'
-    ];
-    if (!origin || allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    } else {
-      return callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
+  origin: ['http://localhost:5173', 'https://sadidukan.vercel.app'], // Frontend URLs
+  credentials: true, // Allow cookies to be sent
 }));
 
 
