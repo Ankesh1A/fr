@@ -18,7 +18,7 @@ app.use(cors({
   origin: function (origin, callback) {
     const allowedOrigins = [
       'http://localhost:5173',
-      'https://saadi-dukan-62c1.vercel.app'
+      'https://sadidukan.vercel.app'
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
